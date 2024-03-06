@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Shopping Cart</h1>
+
+<button onclick="addItem('Apple', 0.99)">Add Apple</button>
+<button onclick="removeItem('Apple')">Remove Apple</button>
+
+<br>
+
+<button onclick="addItem('orange', 0.82)">Add Orange</button>
+<button onclick="removeItem('orange')">Remove Orange</button>
+
+<p id="total"></p>
+<p id="items"></p>
+
+<script>
+let cart = {};
+
+function addItem(item, price) {
+    if (cart[item]) {
+        cart[item].quantity++;
+    } else {
+        cart[item] = {price, quantity: 1};
+    }
+    updateTotal();
+    updateItems();
+}
+
+function removeItem(item) {
+    if (cart[item] && cart[item].quantity > 0) {
+        cart[item].quantity--;
+        if (cart[item].quantity === 0) {
+            delete cart[item];
+        }
+    }
+    updateTotal();
+    updateItems();
+}
+
+function calculateTotal() {
+    let total = 0;
+    for (let item in cart) {
+        total += cart[item].price * cart[item].quantity;
+    }
+    return total;
+}
+
+function updateTotal() {
+    let total = calculateTotal();
+    document.getElementById('total').innerText = "Total cost: $" + total.toFixed(2);
+}
+
+function updateItems() {
+    let items = "";
+    for (let item in cart) {
+        items += item + ": " + cart[item].quantity + "\n";
+    }
+    document.getElementById('items').innerText = items;
+}
+</script>
+
+</body>
+</html>

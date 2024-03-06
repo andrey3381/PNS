@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAK'nSAVE</title>
+    <link href="/css/mainpagecss.css" rel="stylesheet" type="text/css"/>
+    <script src="/javascript/script.js"></script>
+</head>
+<header>
+    <div class="top_banner">
+        <div class="drop_down_menulocations">
+            <label for="locations_menu">You're shopping from</label>
+            <select id="locations_menu">
+                <option value="location_a">PAK'nSAVE Warkworth</option>
+                <option value="location_b">PAK'nSAVE Silverdale</option>
+                <option value="location_C">PAK'nSAVE Royal Oak</option>
+                <option value="location_D">PAK'nSAVE Wairu</option>
+                <option value="location_E">PAK'nSAVE Henderson</option>
+                <option value="location_F">PAK'nSAVE Botany</option>
+            </select>
+        </div>
+        <div class="empty_top_banner"></div>
+        <div class="sign_in_menu">
+            <a class="sign_in_menu" href="https://www.microsoft.com/store/">Login</a> or 
+            <a class="sign_in_menu" href="https://www.microsoft.com/store/">Register</a>
+        </div>
+    </div>
+    <div class="static_banner">
+        <div class="pns_logo_1">
+            <img src="/assets/paknsavelogo.svg" alt="pnslogo_default" height="50px">
+        </div>      
+        <input class="search_bar" type="text" placeholder="Search for groceries or departments" style = "font-size: 15pt">
+        <div id="total" class="trolley" style = "font-size:30px">$0</div>
+</header>
+<article>
+    <div class="ribbon">
+        <div class="list">
+            <a class="list_li" href="https://www.google.co.nz/">Grocery</a>
+            <span style="padding-left: 25px;"></span>
+            <a class="list_li" href="https://www.google.co.nz/">Deals</a>
+            <span style="padding-left: 25px;"></span>
+            <a class="list_li" href="https://www.google.co.nz/">My List</a>
+            <span style="padding-left: 25px;"></span>
+            <a class="list_li" href="https://www.google.co.nz/">About our Prices</a>
+            <span style="padding-left: 25px;"></span>
+            </div>
+        </div>
+</article>
+<body>
+    <article>
+        <main>
+            <div class="container_aov">Aisle of Value</div>
+            <div class="rotating_carousel"> <img src="/assets/aov1.png" alt="aisle_of_value_banner_red" style="height: 80%; margin: 20px;"/>
+                <div id="products">
+                    <p>Grapes</p>
+                    <img src="/assets/grapes.png" alt="grapes" style="height: 150px; padding: 20px"/>
+                    <div class="interactive">
+                        <button onclick="addToCart(2.99, 'minus')">-</button>
+                        <p class="price_tag_a">$2.99</p>
+                        <button onclick="addToCart(2.99, 'plus')">+</button>
+                    </div>
+                </div>
+                <div id="products">
+                    <p>Pork Cutlet</p>
+                    <img src="/assets/porkcutlet.png" alt="pork_meat" style="height: 150px; padding: 20px"/>
+                    <div class="interactive">
+                        <button onclick="addToCart(7.45, 'minus')">-</button> Price = 
+                        <p class="price_tag_a">$7.45</p>
+                        <button onclick="addToCart(7.45, 'plus')">+</button>
+                    </div>
+                </div>
+                <div id="products">
+                    <p>Green Grapes</p>
+                    <img src = "/assets/graperipe.png" alt="grapes_green" style="height: 150px; padding: 20px"/>
+                    <div class= "interactive">
+                        <button onclick="addToCart(1.89, 'minus')">-</button>
+                        <p class="price_tag_a">$1.89</p>
+                        <button onclick="addToCart(1.89, 'plus')">+</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </article>
+</body>
+<footer>
+    <div class="important" style="font-family: arial; display: flex; align-items: center; justify-content: center; font-size: 30px;">This is a test- demo website, kindly, please do not enter any senstive information. This website was created for the sole purpose of education
+        purpose only, and I am not affiliated nor foodstuff commissioned me to create a demo website, all rights and trade marks goes to PAKn'Save and Foodstuff, thank You</div>
+</footer>
+</html>
+
+
+
+
+
+
+        
